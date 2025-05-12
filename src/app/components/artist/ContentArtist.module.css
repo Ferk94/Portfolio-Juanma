@@ -1,0 +1,20 @@
+/* /components/artist/ContentArtist.module.css */
+
+.content {
+  background-color: #fce4ec; /* Fondo claro para el modo artista */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2rem;
+  color: #880e4f;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #880e4f;
+  line-height: 1.6;
+}
