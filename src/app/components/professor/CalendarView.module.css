@@ -1,0 +1,21 @@
+.calendarContainer {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333333;
+  font-size: 1.5rem;
+}
+
+.selectedDate {
+  text-align: center;
+  margin-top: 1rem;
+  color: #555555;
+}

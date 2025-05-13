@@ -1,5 +1,9 @@
 /* /components/professor/ContentProfessor.module.css */
-
+.container {
+  position: static;
+  width: 100%;
+  height: 100%;
+}
 .content {
   background-color: #e3f2fd; /* Fondo claro para el modo profesor */
   padding: 2rem;

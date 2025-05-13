@@ -4,8 +4,8 @@
   position: absolute;
   top: 100px; /* Ajusta la distancia desde la parte superior */
   right: 20px; /* Ajusta la distancia desde la parte derecha */
-  width: 60px; /* Tamaño del botón */
-  height: 60px; /* Tamaño del botón */
+  width: 55px; /* Tamaño del botón */
+  height: 55px; /* Tamaño del botón */
   border-radius: 50%; /* Hacer el botón circular */
   background-color: #1976d2; /* Puedes cambiar el color aquí */
   color: white;
