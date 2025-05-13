@@ -1,25 +1,35 @@
-/* .section {
-    width : 100%;
-    height: 100%;
-    background-image: url('https://www.freepik.es/foto-gratis/musico-tocando-bateria-fondo-negro-hermosa-luz-suave-juego-emocional-concepto-musica_10107436.htm#fromView=search&page=1&position=2&uuid=5d185862-b0d9-4892-86dd-5e0195998d89&query=Profesor+de+Bateria');
-} */
-
-
 .section {
-  position: static;
-  /* display: flex;
-  justify-content: center; */
-  width: 1200px;
-  height: 100vh;
-  background-image: url('../../../../public/landingPageProfessor.jpeg');
+  width: 100%;
+  height: 500px;
+  padding-bottom: 6rem; /* deja espacio para el footer */
+  background-image: url('/landingPageProfessor.jpeg');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.7
-  /* background-color: red */
+  position: relative;
+  display: flex;
+  opacity: 0.9;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
+/* Opcional: mejora contraste del texto */
+.parrafo {
+  font-size: 3rem;
+  color: white;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
 
-
-/* .parrafo {
-    color: blue;
-} */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4); /* fondo oscuro transparente */
+  z-index: 0;
+}

@@ -27,6 +27,7 @@ const ContentArtist: React.FC<ContentArtistProps> = ({ activeSection }) => {
   //       return 'por ahora calendar'
   //   }
   // };
+  console.log(activeSection)
 
   return (
     <section>

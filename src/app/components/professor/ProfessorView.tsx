@@ -11,7 +11,7 @@ export default function ProfessorView() {
   const [activeSection, setActiveSection] = useState("landing page");
 
   return (
-    <div >
+    <div className={styles.container} >
       <NavBarProfessor onSectionChange={setActiveSection} />
       {/* <IntroProfessor /> */}
       <div className={styles.content}>

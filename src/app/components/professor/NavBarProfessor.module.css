@@ -1,13 +1,25 @@
 .navBar {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
   background-color: #1976d2;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 10;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.centerSection {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex: 1;
 }
 
 .button {
@@ -19,9 +31,10 @@
   padding: 0.5rem 1rem;
   transition: background-color 0.2s ease;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
 }
 
 .button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
