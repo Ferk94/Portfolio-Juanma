@@ -5,7 +5,7 @@ import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 const FooterProfessor = () => {
   return (
     <footer className={styles.footer}>
-      <p className={styles.text}>© 2025 Juan Manuel Belluschi - Clases de Batería</p>
+      <p className={styles.text}>© 2025 Juan Manuel Belluschi - Baterista Profesional</p>
       <div className={styles.icons}>
         <a
           href="https://www.instagram.com/bata_alpalo/"

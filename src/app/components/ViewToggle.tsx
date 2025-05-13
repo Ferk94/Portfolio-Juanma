@@ -2,8 +2,8 @@
 import styles from "./ViewToggle.module.css"
 import React from "react";
 import Image from "next/image";
-import IconDrumsVector from '@/public/icon-drums-vector.jpg'
-import GraduationIcon from '@/public/graduation.jpeg'
+import IconDrumsVector from '@/public/drumps.svg'
+import GraduationIcon from '@/public/graduation.svg'
 
 // Definir el tipo de las props de ViewToggle
 interface ViewToggleProps {
@@ -13,7 +13,7 @@ interface ViewToggleProps {
 
 const ViewToggle: React.FC<ViewToggleProps> = ({ modo, setModo }) => {
   return (
-    <div>
+    <div className={styles.container}>
       
         <button onClick={() => setModo(modo === "professor" ? "artist" : "professor")}
               className={styles.button}

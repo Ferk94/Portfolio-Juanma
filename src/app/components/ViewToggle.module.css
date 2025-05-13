@@ -1,13 +1,16 @@
 /* /components/ViewToggle.module.css */
+/* .container {
+  margin-bottom: -50px;
+} */
 
 .button {
   position: absolute;
-  top: 100px; /* Ajusta la distancia desde la parte superior */
+  top: 10px; /* Ajusta la distancia desde la parte superior */
   right: 20px; /* Ajusta la distancia desde la parte derecha */
-  width: 55px; /* Tamaño del botón */
-  height: 55px; /* Tamaño del botón */
+  width: 53px; /* Tamaño del botón */
+  height: 53px; /* Tamaño del botón */
   border-radius: 50%; /* Hacer el botón circular */
-  background-color: #1976d2; /* Puedes cambiar el color aquí */
+  background-color: #ffffff; /* Puedes cambiar el color aquí */
   color: white;
   font-size: 20px;
   border: none;
@@ -16,7 +19,7 @@
   align-items: center;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10; /* Asegurarse de que el botón esté por encima de otros elementos */
+  z-index: 100; /* Asegurarse de que el botón esté por encima de otros elementos */
 }
 
 /* Añade más estilos si es necesario */

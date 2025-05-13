@@ -1,11 +1,12 @@
 .container {
   height: 100vh;
+  background-color:#f7db8fff;
 }
 
 .content {
   max-width: 100%;
   margin: 0 auto;
-  background-color: white;
+  /* background-color: white; */
   height: 100vh;
   /* padding: 2rem; */
   border-radius: 12px;

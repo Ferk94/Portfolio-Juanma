@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1976d2; /* Celeste oscuro: color exclusivo del profesor */
+  background-color: #920909e7; /* Celeste oscuro: color exclusivo del profesor */
   padding: 1rem 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Sombra como en navbar de artist */
   border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Línea sutil en la parte inferior */

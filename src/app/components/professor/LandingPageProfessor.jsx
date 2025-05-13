@@ -9,9 +9,9 @@ const LandingPageProfessor = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.parrafo}>Bienvenidos!</h2>
+      {/* <h2 className={styles.parrafo}>Bienvenidos!</h2>
       
-      <p>Consultá precios, horarios y agendá directamente tu primer clase!.</p>
+      <p>Consultá precios, horarios y agendá directamente tu primer clase!.</p> */}
     </section>
   );
 };
