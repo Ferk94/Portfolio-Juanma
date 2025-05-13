@@ -1,18 +1,23 @@
 .navBar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #1976d2;
-  padding: 1rem 2rem;
+  background-color: #1976d2; /* Celeste oscuro: color exclusivo del profesor */
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Sombra como en navbar de artist */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Línea sutil en la parte inferior */
+  gap: 1rem;
+  font-family: 'Verdana', sans-serif;
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .leftSection {
   display: flex;
   align-items: center;
+  position: absolute;
+  left: 1rem;
 }
 
 .centerSection {
@@ -22,19 +27,42 @@
   flex: 1;
 }
 
-.button {
-  background-color: transparent;
-  color: white;
-  font-size: 1rem;
+.navButton {
+  background: transparent;
+  color: #ffffff; /* Texto blanco para contrastar con fondo celeste */
   border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.2s ease;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+  position: relative;
 }
 
-.button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.navButton:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.navButton::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navButton:hover::after {
+  width: 100%;
+}
+
+/* Botón con imagen de la izquierda */
+.leftSection .navButton img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }

@@ -11,7 +11,7 @@ export default function NavBarProfessor({ onSectionChange }: Props) {
     <nav className={styles.navBar}>
       {/* Botón de inicio alineado a la izquierda */}
       <div className={styles.leftSection}>
-        <button className={styles.button} onClick={() => onSectionChange("landing page")}>
+        <button className={styles.navButton} onClick={() => onSectionChange("landing page")}>
           <Image
             src={HouseIcon}
             alt="landing page"
@@ -23,17 +23,11 @@ export default function NavBarProfessor({ onSectionChange }: Props) {
 
       {/* Botones del centro */}
       <div className={styles.centerSection}>
-        <button className={styles.button} onClick={() => onSectionChange("calendar")}>Calendario</button>
-        <button className={styles.button} onClick={() => onSectionChange("classes")}>Clases</button>
-        <button className={styles.button} onClick={() => onSectionChange("resources")}>Recursos</button>
-        <button className={styles.button} onClick={() => onSectionChange("testimonials")}>Testimonios</button>
+        <button className={styles.navButton} onClick={() => onSectionChange("calendar")}>Calendario</button>
+        <button className={styles.navButton} onClick={() => onSectionChange("classes")}>Clases</button>
+        <button className={styles.navButton} onClick={() => onSectionChange("resources")}>Recursos</button>
+        <button className={styles.navButton} onClick={() => onSectionChange("testimonials")}>Testimonios</button>
       </div>
     </nav>
   );
 }
-
-
-
-
-
-

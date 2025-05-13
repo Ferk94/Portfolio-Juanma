@@ -8,8 +8,12 @@ const playlist = [
     src: '/songs/happyrock.mp3',
   },
   {
-    title: 'Land of Phantoms - Tremendius',
-    src: '/songs/landOfPhantoms.mp3',
+    title: 'Guzheng City - Mcleod',
+    src: '/songs/guzhengCity.mp3',
+  },
+  {
+    title: 'Mesmerizing Galaxy - Mcleod',
+    src: '/songs/mesmerizingGalaxy.mp3',
   }
 ];
 

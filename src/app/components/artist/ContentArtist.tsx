@@ -1,42 +1,39 @@
-// /components/professor/ContentProfessor.tsx
+// /components/artist/ContentArtist.tsx
 import React from "react";
-// import CalendarComponent from "./Calendar"; // Componente de calendario
-// import AvailableClasses from "./AvailableClasses"; // Componente de clases disponibles
-// import Resources from "./Resources"; // Componente de recursos educativos
-// import Testimonials from "./Testimonials"; // Componente de testimonios
+import LandingPageArtist from "./LandingPageArtist"; // Landing por defecto
+import Songs from "./Songs";         // Tus temas
+import Solos from "./Solos";        // Tus solos
+import Drumps from "./Drumps";       // Batería
+import Bands from "./Bands";         // Bandas
+import styles from "./ContentArtist.module.css";
 
 interface ContentArtistProps {
-  activeSection: string; // Prop para saber qué sección renderizar
+  activeSection: string;
 }
 
 const ContentArtist: React.FC<ContentArtistProps> = ({ activeSection }) => {
-  // const renderSection = () => {
-  //   switch (activeSection) {
-  //     case "calendar":
-  //       // return <CalendarComponent />;
-  //       return 'por ahora calendar'
-  //     case "classes":
-  //       // return <AvailableClasses />;
-  //       return 'por ahora clases'
-  //     case "resources":
-  //       return <Resources />;
-  //     case "testimonials":
-  //       return <Testimonials />;
-  //     default:
-  //       // return <CalendarComponent />;
-  //       return 'por ahora calendar'
-  //   }
-  // };
-  console.log(activeSection)
+  const renderSection = () => {
+    switch (activeSection) {
+      case "songs":
+        return <Songs />;
+      case "solos":
+        return <Solos />;
+      case "Drumps":
+        return <Drumps />;
+      case "bands":
+        return <Bands />;
+      case "landing page":
+        return <LandingPageArtist/>;
+      default:
+        return <LandingPageArtist />;
+    }
+  };
 
   return (
-    <section>
-      <h2>Bienvenido Artista</h2>
-      <p>Contenido de artista.</p>
-      {/* {renderSection()} */}
+    <section className={styles.container}>
+      {renderSection()}
     </section>
   );
 };
 
 export default ContentArtist;
-
