@@ -4,16 +4,16 @@ import styles from './RadioPlayer.module.css';
 
 const playlist = [
   {
-    title: 'Happy Rock - Richard León',
-    src: '/songs/happyrock.mp3',
+    title: 'Us And Them - Pink Floyd',
+    src: '/songs/usAndThem.mp3',
   },
   {
-    title: 'Guzheng City - Mcleod',
-    src: '/songs/guzhengCity.mp3',
+    title: 'Mi Soberano - Gustavo Cordera',
+    src: '/songs/miSoberano.mp3',
   },
   {
-    title: 'Mesmerizing Galaxy - Mcleod',
-    src: '/songs/mesmerizingGalaxy.mp3',
+    title: 'Shamming - Bob Marley',
+    src: '/songs/shamming.mp3',
   }
 ];
 

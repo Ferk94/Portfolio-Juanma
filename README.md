@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto Plataforma Artista & Profesor - Landing + Paneles Interactivos
 
-## Getting Started
+Este proyecto fue desarrollado para un **profesor de batería** que buscaba una presencia online más moderna y flexible, tanto para su perfil profesional como artístico. La idea fue construir una **landing page visual y atractiva**, y dos **paneles separados**: uno orientado a su rol como **Profesor** y otro a su faceta como **Artista**, cada uno con navegación, estética y funcionalidades propias.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Objetivos del cliente
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El cliente solicitó:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Una **landing page** clara, con presentación personal, llamados a la acción y acceso a ambos paneles (Profesor / Artista).
+- Dos paneles internos con navegaciones diferenciadas:
+  
+  ### 🔸 Panel del Profesor
+  - Vista de calendario.
+  - Sección de clases disponibles.
+  - Recursos didácticos descargables.
+  - Testimonios de alumnos.
+  - Estética sobria y profesional.
+  
+  ### 🔸 Panel del Artista
+  - Misma estructura general que el de profesor, pero con **diseño más expresivo**.
+  - Incluye una **radio personalizada** que reproduce temas grabados por el cliente tocando la batería.
+  - Cada tema cargado en la radio es de autoría propia, respetando los derechos de uso.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Todo el sitio debía ser **modular y fácilmente escalable**.
+- Diseño **responsive**, visualmente atractivo y funcional en dispositivos móviles.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧪 Tecnologías utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔹 Next.js
+Framework basado en React que permite SSR y generación estática. Ideal para proyectos con rutas diferenciadas (landing + dos paneles).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔹 TypeScript
+Lenguaje con tipado fuerte que mejora la mantenibilidad, reduce errores y da soporte a largo plazo.
 
-## Deploy on Vercel
+### 🔹 CSS Modules
+Permiten aplicar estilos encapsulados por componente, lo que ayudó a mantener separados y bien definidos los estilos del modo Artista y Profesor.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔹 HTML5 Audio API
+Utilizada en el panel Artista para la creación de una radio con temas en formato `.mp3`. Se incorporó un `<audio>` personalizado.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔹 Next/Image
+Usada para optimizar imágenes automáticamente y mejorar la performance de la landing y los paneles.
+
+### 🔹 Git + GitHub
+Control de versiones completo con ramas organizadas por funcionalidad y fases del proyecto.
+
+---
+
+## 🎨 Detalles de diseño
+
+- Se implementaron **dos barras de navegación diferentes**:
+  - En el modo Profesor: diseño sobrio (fondo celeste oscuro), con botón flotante para volver a la landing.
+  - En el modo Artista: diseño más contrastante (negro/gris oscuro) con hover interactivo y colores llamativos.
+- Los estilos fueron ajustados para mantener una altura consistente, sombras sutiles, y un diseño centrado tanto en funcionalidad como en estética.
+
+---
+
+## 🔐 Legalidad y propiedad de contenido
+
+- Todos los temas usados en la **radio del panel Artista** fueron grabados por el profesor personalmente en batería.
+- No se utilizaron pistas comerciales protegidas por derechos de autor.
+- El reproductor fue diseñado para emitir únicamente esos contenidos, cumpliendo así con los requisitos legales.
+
+---
+
+## 👨‍💻 Autor
+
+Este proyecto fue desarrollado por **Fernando Kaganovicz** como desarrollador freelance full stack. Me encargué del diseño, estructura técnica, componentes funcionales, y adaptación visual en base al feedback del cliente.
+
+---
+
+## 🚀 Posibles mejoras futuras
+
+- Incorporar un CMS (como Sanity, Strapi o Contentful) para que el cliente pueda cargar fácilmente nuevos recursos o testimonios.
+- Integrar autenticación para que el cliente acceda a un panel editable.
+- Mejorar el reproductor con lista de reproducción, orden aleatorio, etc.
+- Añadir formulario de contacto con reserva de clase automática desde el calendario.
+
