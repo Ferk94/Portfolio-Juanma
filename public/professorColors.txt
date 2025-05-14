@@ -1,4 +1,4 @@
 paleta de colores Professor: 
 
-Beige anaranjado: #f7db8fff
+Beige anaranjado: #f7db8f
 Bordó: #920909

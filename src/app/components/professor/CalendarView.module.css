@@ -1,6 +1,10 @@
 .calendarContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   max-width: 400px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1rem;
   background-color: #ffffff;
   border-radius: 10px;

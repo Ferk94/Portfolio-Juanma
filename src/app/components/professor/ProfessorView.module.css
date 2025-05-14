@@ -1,13 +1,18 @@
 .container {
-  height: 100vh;
-  background-color:#f7db8fff;
+  /* display: flex;
+  flex-direction: column; */
+  min-height: 100vh;
+  background-color:#f7db8f;
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   max-width: 100%;
   margin: 0 auto;
   /* background-color: white; */
-  height: 100vh;
+  min-height: 100vh;
   /* padding: 2rem; */
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);

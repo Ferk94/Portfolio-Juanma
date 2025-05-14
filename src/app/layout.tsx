@@ -1,5 +1,6 @@
 // app/layout.tsx
-import "./globals.css"; // si usás Tailwind o CSS global
+// import "./globals.css"; // si usás Tailwind o CSS global
+import styles from './layout.module.css'
 import type { ReactNode } from "react";
 import { ViewModeProvider } from "./context/ViewModeContext";
 import FooterFerk from "./components/footers/FooterFerk";
@@ -15,24 +16,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="es">
       <body>
         <ViewModeProvider>
-          <div className="flex flex-col min-h-screen">
-            {/* <header className="w-full flex justify-between items-center p-4 bg-black text-white">
-              <h1 className="text-2xl font-bold">Portfolio Baterista</h1>
-              <ViewToggle />
-            </header> */}
-
-            <main className="flex-grow">{children}</main>
-
-            {/* <footer className="w-full p-4 bg-neutral-900 text-white text-center text-sm">
-              © {new Date().getFullYear()} Hecho con ❤️ por Fer
-            </footer> */}
+          <div className={styles.containerLayout}>
+            <main className={styles.mainContent}>
+              {/* <div style={{ border: "2px solid blue", minHeight: "200px" }}>
+                [DEBUG] Dentro de main
+              </div> */}
+              {children}
+              </main>
             <FooterProfessor />
             <FooterFerk />
           </div>
         </ViewModeProvider>
-            
-      </body>
-            
+      </body>      
     </html>
   );
 }
