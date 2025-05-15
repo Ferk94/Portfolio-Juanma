@@ -42,6 +42,7 @@ export default function NavBarProfessor({ onSectionChange }: Props) {
         <button className={styles.navButton} onClick={() => handleSectionChange("classes")}>Clases</button>
         <button className={styles.navButton} onClick={() => handleSectionChange("resources")}>Recursos</button>
         <button className={styles.navButton} onClick={() => handleSectionChange("testimonials")}>Testimonios</button>
+        <button className={styles.navButton} onClick={() => handleSectionChange("about")}>Sobre Mí</button>
       </div>
     </nav>
   );

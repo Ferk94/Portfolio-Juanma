@@ -6,12 +6,17 @@ import styles from "./LandingPageProfessor.module.css";
 import { useRef } from "react";
 import ParticlesBackground from "./animations/ParticlesBackground"; // ruta según tu estructura
 
-export default function LandingPageProfessor() {
+interface LandingPageProfessorProps {
+  setActiveSection: any;
+}
+
+ const LandingPageProfessor: React.FC<LandingPageProfessorProps> = ({setActiveSection}) => {
   const exploreRef = useRef<HTMLElement>(null);
 
   const handleExploreClick = () => {
     exploreRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
 
   return (
     <>
@@ -25,13 +30,6 @@ export default function LandingPageProfessor() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className={styles.text}>
-          <h1>Juan Manuel Belluschi</h1>
-          <p>Clases de batería con pasión y técnica</p>
-          <button onClick={handleExploreClick} className={styles.ctaButton}>
-            Explorar
-          </button>
-        </div>
         <Image
           src="/perfilProfessor.jpeg"
           alt="Profesor de batería"
@@ -39,6 +37,13 @@ export default function LandingPageProfessor() {
           height={280}
           className={styles.heroImage}
         />
+        <div className={styles.text}>
+          <h1>Juan Manuel Belluschi</h1>
+          <p>Clases de batería con pasión y técnica</p>
+          <button onClick={() => setActiveSection('classes')} className={styles.ctaButton}>
+            Explorar
+          </button>
+        </div>
       </motion.div>
 
       {/* SECCIÓN EXPLORAR */}
@@ -79,3 +84,4 @@ export default function LandingPageProfessor() {
   );
 }
 
+export default LandingPageProfessor;

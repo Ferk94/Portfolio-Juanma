@@ -16,7 +16,10 @@ export default function ProfessorView() {
       {/* <IntroProfessor /> */}
       <div className={styles.content}>
         <WhatsAppButton></WhatsAppButton>
-        <ContentProfessor activeSection={activeSection} />
+        <ContentProfessor 
+        activeSection={activeSection}                  
+        setActiveSection={setActiveSection}
+         />
       </div>
     </div>
   );

@@ -5,12 +5,12 @@
 
 .button {
   position: absolute;
-  top: 10px; /* Ajusta la distancia desde la parte superior */
+  top: 5px; 
   right: 20px; /* Ajusta la distancia desde la parte derecha */
   width: 53px; /* Tamaño del botón */
   height: 53px; /* Tamaño del botón */
   border-radius: 50%; /* Hacer el botón circular */
-  background-color: #ffffff; /* Puedes cambiar el color aquí */
+  background-color: #f7e7da; /* Puedes cambiar el color aquí */
   color: white;
   font-size: 20px;
   border: none;

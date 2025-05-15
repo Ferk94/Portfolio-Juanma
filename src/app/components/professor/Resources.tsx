@@ -4,7 +4,7 @@ import styles from "./Resources.module.css";
 const Resources: React.FC = () => {
   return (
     <section className={styles.resourcesSection}>
-      <h2 className={styles.title}>📚 Recursos Educativos</h2>
+      <h2 className={styles.title}>Recursos Educativos</h2>
 
       <div className={styles.resourceCard}>
         <h3>📄 PDF: Introducción a la Batería</h3>

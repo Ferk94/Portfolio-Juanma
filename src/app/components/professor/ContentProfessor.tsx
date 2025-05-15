@@ -5,27 +5,29 @@ import CalendarView from "./CalendarView"; // Componente de calendario
 import Classes from "./Classes"; // Componente de clases disponibles
 import Resources from "./Resources"; // Componente de recursos educativos
 import Testimonials from "./Testimonials"; // Componente de testimonios
+import About from "./About" // componente de Sobre Mí
 import LandingPageProfessor from "./LandingPageProfessor"
 
 interface ContentProfessorProps {
   activeSection: string; // Prop para saber qué sección renderizar
+  setActiveSection: any;
 }
 
-const ContentProfessor: React.FC<ContentProfessorProps> = ({ activeSection }) => {
+const ContentProfessor: React.FC<ContentProfessorProps> = ({ activeSection, setActiveSection }) => {
   const renderSection = () => {
     switch (activeSection) {
       case "calendar":
         return <CalendarView />;
       case "classes":
         return <Classes />;
-        // return 'por ahora clases'
       case "resources":
         return <Resources />;
       case "testimonials":
         return <Testimonials />;
+      case "about":
+        return <About />;
       default:
-        // return <CalendarComponent />;
-        return <LandingPageProfessor/>
+        return <LandingPageProfessor setActiveSection={setActiveSection}/>
     }
   };
 

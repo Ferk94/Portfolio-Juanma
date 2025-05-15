@@ -1,19 +1,27 @@
 // app/layout.tsx
-// import "./globals.css"; // si usás Tailwind o CSS global
+import "./globals.css"; // si usás Tailwind o CSS global
 import styles from './layout.module.css'
 import type { ReactNode } from "react";
 import { ViewModeProvider } from "./context/ViewModeContext";
 import FooterFerk from "./components/footers/FooterFerk";
 import FooterProfessor from './components/footers/FooterProfessor'
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'], // normal, semi-bold, bold
+  display: 'swap',
+  variable: '--font-poppins',
+});
 
 export const metadata = {
-  title: "Portfolio Baterista",
-  description: "Portfolio personal de un baterista profesional.",
+  title: 'Clases de Batería',
+  description: 'Aprendé batería con Juan Manuel Belluschi',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" className={poppins.variable}>
       <body>
         <ViewModeProvider>
           <div className={styles.containerLayout}>

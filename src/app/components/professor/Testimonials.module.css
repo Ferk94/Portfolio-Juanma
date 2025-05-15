@@ -1,0 +1,46 @@
+.testimonials {
+  background-color: #f7e7da;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #920909;
+  text-align: center;
+  color: #920909;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* border: 2px solid #920909; */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.text {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.author {
+  font-weight: bold;
+  color: #920909;
+}
