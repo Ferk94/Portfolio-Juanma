@@ -1,39 +1,81 @@
-import styles from './LandingPageProfessor.module.css';
-import Image from 'next/image';
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import styles from "./LandingPageProfessor.module.css";
+import { useRef } from "react";
+import ParticlesBackground from "./animations/ParticlesBackground"; // ruta según tu estructura
 
 export default function LandingPageProfessor() {
+  const exploreRef = useRef<HTMLElement>(null);
+
+  const handleExploreClick = () => {
+    exploreRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className={styles.container}>
-      <div className={styles.header}>
-        <Image
-          src="/perfilProfessor.jpeg" // reemplazar con tu imagen
-          alt="Profesor de batería"
-          width={200}
-          height={200}
-          className={styles.profileImage}
-        />
-        <div className={styles.textInfo}>
-          <h1>Clases de Batería con Juan Manuel Belluschi</h1>
-          <p>Aprendé batería desde cero o perfeccioná tu técnica con un enfoque personalizado.</p>
+    <>
+  <ParticlesBackground />
+  <section className={styles.landingContainer}>
+    {/* el resto del contenido */}
+      {/* HERO animado */}
+      <motion.div
+        className={styles.hero}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <div className={styles.text}>
+          <h1>Juan Manuel Belluschi</h1>
+          <p>Clases de batería con pasión y técnica</p>
+          <button onClick={handleExploreClick} className={styles.ctaButton}>
+            Explorar
+          </button>
         </div>
-      </div>
+        <Image
+          src="/perfilProfessor.jpeg"
+          alt="Profesor de batería"
+          width={280}
+          height={280}
+          className={styles.heroImage}
+        />
+      </motion.div>
 
-      <div className={styles.classDetails}>
-        <h2>🎵 Detalles de las clases</h2>
-        <ul>
-          <li><strong>Modalidad:</strong> Presencial o a domicilio (zona norte o CABA).</li>
-          <li><strong>Ubicación:</strong> Olivos, Buenos Aires</li>
-          <li><strong>Días disponibles:</strong> Lunes a Sábado</li>
-          <li><strong>Horarios:</strong> 10:00 a 20:00 hs</li>
-          <li><strong>Precio:</strong> $7.500 por clase individual / $30000 mensual (4 clases)</li>
-        </ul>
-      </div>
+      {/* SECCIÓN EXPLORAR */}
+      <section ref={exploreRef} className={styles.explorar}>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Explorá el mundo de la batería
+        </motion.h2>
 
-      <div className={styles.cta}>
-        <a href="#contacto" className={styles.ctaButton}>
-          Agendá tu primera clase
-        </a>
-      </div>
-    </section>
+        <div className={styles.benefitGrid}>
+          <motion.div
+            className={styles.benefitCard}
+            whileHover={{ scale: 1.05 }}
+          >
+            🥁 Técnica para todos los niveles
+          </motion.div>
+          <motion.div
+            className={styles.benefitCard}
+            whileHover={{ scale: 1.05 }}
+          >
+            🎧 Adaptado a tu estilo
+          </motion.div>
+          <motion.div
+            className={styles.benefitCard}
+            whileHover={{ scale: 1.05 }}
+          >
+            🎼 Ejercicios prácticos
+          </motion.div>
+        </div>
+      </section>
+  </section>
+</>
+
+    
   );
 }
+

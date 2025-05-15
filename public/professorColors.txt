@@ -1,4 +1,10 @@
 paleta de colores Professor: 
 
 Beige anaranjado: #f7db8f
+
+opciones disponibles para color primario: 
+crema suave / vainalla claro: #fdf6f0
+gris cálido claro: #f2f2f2
+champán / beige elegante: #f7e7da
+
 Bordó: #920909
