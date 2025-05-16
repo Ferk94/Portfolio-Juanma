@@ -54,7 +54,7 @@
 }
 
 .track {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   margin-bottom: 0.4rem;
   color: #c2c2c2;
 }
@@ -140,7 +140,7 @@
 }
 
 .minimized .minimizedContent {
-  justify-content: space-around;
+  justify-content: flex-end;
   flex-direction: column;
 }
 

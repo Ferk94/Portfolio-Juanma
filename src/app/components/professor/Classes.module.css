@@ -34,7 +34,7 @@
 .subtitle {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #0d47a1;
+  color: #920909;
 }
 
 .classDetails ul {
@@ -64,7 +64,8 @@
 }
 
 .ctaButton:hover {
-  background-color: #7a0707;
+  background-color: #c32323;
+  text-decoration: none;
 }
 
 .videoWrapper {

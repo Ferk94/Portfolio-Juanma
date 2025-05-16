@@ -1,0 +1,54 @@
+.container {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.bandList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.bandCard {
+  background-color: #f3f3f3;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border: 2px solid #000000;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.bandName {
+  font-size: 1.3rem;
+  color: #b01010;
+  margin-bottom: 0.3rem;
+}
+
+.role {
+  font-size: 1rem;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: #333;
+}

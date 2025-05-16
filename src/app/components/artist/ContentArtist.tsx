@@ -1,10 +1,10 @@
 // /components/artist/ContentArtist.tsx
 import React from "react";
-import LandingPageArtist from "./LandingPageArtist"; // Landing por defecto
-import Songs from "./Songs";         // Tus temas
-import Solos from "./Solos";        // Tus solos
-import Drumps from "./Drumps";       // Batería
-import Bands from "./Bands";         // Bandas
+import LandingPageArtist from "./LandingPageArtist";
+import Songs from "./Songs";              
+import Drumps from "./Drumps";    
+import Bands from "./Bands";
+import Shows from "./Shows";
 import styles from "./ContentArtist.module.css";
 
 interface ContentArtistProps {
@@ -16,12 +16,12 @@ const ContentArtist: React.FC<ContentArtistProps> = ({ activeSection }) => {
     switch (activeSection) {
       case "songs":
         return <Songs />;
-      case "solos":
-        return <Solos />;
       case "Drumps":
         return <Drumps />;
       case "bands":
         return <Bands />;
+      case "shows":
+        return <Shows />;
       case "landing page":
         return <LandingPageArtist/>;
       default:

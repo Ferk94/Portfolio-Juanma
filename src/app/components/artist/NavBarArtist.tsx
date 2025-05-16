@@ -10,9 +10,9 @@ export default function NavBarArtist({ onSectionChange }: Props) {
 
   const sections = [
     { id: 'songs', label: '🎵 Temas' },
-    { id: 'solos', label: '🎸 Solos' },
     { id: 'Drumps', label: '🥁 Batería' },
     { id: 'bands', label: '🎤 Bandas' },
+    {id: 'shows', label: '🎸 Shows'}
   ];
 
   const handleClick = (id: string) => {

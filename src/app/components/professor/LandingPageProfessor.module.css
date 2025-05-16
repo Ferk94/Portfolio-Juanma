@@ -28,7 +28,7 @@
 }
 
 .ctaButton {
-  background-color: #0d47a1;
+  background-color: #920909;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -38,7 +38,7 @@
 }
 
 .ctaButton:hover {
-  background-color: #1565c0;
+  background-color: #c32323;
 }
 
 .explorar {
