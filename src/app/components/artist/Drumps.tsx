@@ -6,6 +6,7 @@ export default function Drumps() {
   return (
     <section className={styles.dumpsSection}>
       <div className={styles.content}>
+        {/* <h2 className={styles.title}>Batería y otros Instrumentos</h2> */}
         <p className={styles.intro}>
           La batería es mi forma de expresión principal. Busco siempre aportar groove, musicalidad y personalidad a cada proyecto en el que participo.
         </p>
