@@ -17,6 +17,9 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Clases de Batería',
   description: 'Aprendé batería con Juan Manuel Belluschi',
+  icons: {
+    icon: '/drums.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
