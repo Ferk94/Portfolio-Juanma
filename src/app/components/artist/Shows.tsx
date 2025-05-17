@@ -4,7 +4,7 @@ import styles from "./Shows.module.css";
 
 const videos = [
   {
-    id: "dQw4w9WgXcQ", // reemplazá por el ID real de tu video
+    id: "dQw4w9WgXcQ",
     title: "Show en The Roxy",
   },
   {
@@ -15,7 +15,20 @@ const videos = [
     id: "L_jWHffIx5E",
     title: "Jam session en vivo",
   },
+  {
+    id: "eY52Zsg-KVI",
+    title: "Ensayo en estudio",
+  },
+  {
+    id: "9bZkp7q19f0",
+    title: "Festival al aire libre",
+  },
+  {
+    id: "oHg5SJYRHA0",
+    title: "Concierto íntimo en sala",
+  },
 ];
+
 
 export default function Shows() {
   return (

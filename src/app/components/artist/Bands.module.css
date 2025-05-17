@@ -37,14 +37,14 @@
 
 .bandName {
   font-size: 1.3rem;
-  color: #b01010;
+  color: #264653;
   margin-bottom: 0.3rem;
 }
 
 .role {
   font-size: 1rem;
   color: #444;
-  font-style: italic;
+  font-style: bold;
   margin-bottom: 0.5rem;
 }
 

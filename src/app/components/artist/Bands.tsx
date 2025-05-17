@@ -4,22 +4,22 @@ import styles from "./Bands.module.css";
 
 const bands = [
   {
-    name: "Los Rítmicos",
-    role: "Baterista principal (2018 - 2021)",
+    name: "Santi Attadia y lex equilibristas",
+    role: "Baterista principal (2022 - presente)",
     description:
-      "Participé en giras nacionales, grabaciones de estudio y múltiples festivales. Fusión de rock y jazz. Experiencia clave para mi desarrollo en vivo.",
+      "Colaboré en sesiones de grabación y Shows en vivo, siempre con temas compuestos por Santiago",
   },
   {
-    name: "Groove Machine",
-    role: "Baterista sesionista (2021 - 2022)",
+    name: "Anael",
+    role: "Baterista (2020 - 2022)",
     description:
-      "Colaboré en sesiones de grabación y tocatas en vivo. Proyecto de funk instrumental con músicos reconocidos de la escena local.",
+      "Colaboré en sesiones de grabación y tocatas en vivo. Proyecto de rock progresivo con músicos reconocidos de la escena local.",
   },
   {
-    name: "Proyecto Belluschi",
-    role: "Proyecto personal (2023 - Presente)",
+    name: "Jona's Band",
+    role: "Baterista (2014 - 2014)",
     description:
-      "Trabajo en composiciones propias, explorando el lado creativo y experimental de la batería como eje central del sonido.",
+      "Colaboré en sesiones de grabación tocando temas del lider. ",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function Bands() {
         {bands.map((band, index) => (
           <div key={index} className={styles.bandCard}>
             <h3 className={styles.bandName}>{band.name}</h3>
-            <p className={styles.role}>{band.role}</p>
+            <p className={styles.role}><strong>{band.role}</strong></p>
             <p className={styles.text}>{band.description}</p>
           </div>
         ))}

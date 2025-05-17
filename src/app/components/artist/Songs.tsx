@@ -6,7 +6,8 @@ export default function Songs() {
   return (
     <section className={styles.temasSection}>
       <div className={styles.content}>
-        <p className={styles.intro}>
+          <h2 className={styles.title}>Mis Composiciones</h2>
+        <p className={styles.description}>
           Además de interpretar, compongo música instrumental con fuerte raíz rítmica y atmósferas experimentales. Cada tema busca contar una historia.
         </p>
 
