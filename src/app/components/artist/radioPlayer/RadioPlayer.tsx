@@ -14,6 +14,14 @@ const playlist = [
   {
     title: 'Shamming - Bob Marley',
     src: '/songs/shamming.mp3',
+  },
+  {
+    title: 'Sonrisas de Papel - Santi Attadia y lxs Equilibristas',
+    src: '/songs/sonrisasDePapel.mp3',
+  },
+  {
+    title: 'Reflexión - Santi Attadia y lxs Equilibristas',
+    src: '/songs/reflexion.mp3',
   }
 ];
 
