@@ -2,7 +2,7 @@ import styles from './LandingPageArtist.module.css';
 
 
 interface LandingPageArtistProps {
-  setActiveSection: any;
+  setActiveSection: React.Dispatch<React.SetStateAction<string>>;
 }
 
 

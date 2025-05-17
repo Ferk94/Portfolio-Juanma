@@ -1,7 +1,7 @@
 // /components/professor/ContentProfessor.tsx
 import React from "react";
 import styles from './ContentProfessor.module.css';
-import CalendarView from "./CalendarView"; // Componente de calendario
+// import CalendarView from "./CalendarView"; 
 import Classes from "./Classes"; // Componente de clases disponibles
 import Resources from "./Resources"; // Componente de recursos educativos
 import Testimonials from "./Testimonials"; // Componente de testimonios
@@ -10,7 +10,7 @@ import LandingPageProfessor from "./LandingPageProfessor"
 
 interface ContentProfessorProps {
   activeSection: string; // Prop para saber qué sección renderizar
-  setActiveSection: any;
+  setActiveSection: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const ContentProfessor: React.FC<ContentProfessorProps> = ({ activeSection, setActiveSection }) => {

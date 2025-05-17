@@ -9,7 +9,7 @@ import styles from "./ContentArtist.module.css";
 
 interface ContentArtistProps {
   activeSection: string;
-  setActiveSection: any;
+  setActiveSection: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const ContentArtist: React.FC<ContentArtistProps> = ({ activeSection, setActiveSection }) => {

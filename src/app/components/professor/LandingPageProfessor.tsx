@@ -7,15 +7,15 @@ import { useRef } from "react";
 import ParticlesBackground from "./animations/ParticlesBackground"; // ruta según tu estructura
 
 interface LandingPageProfessorProps {
-  setActiveSection: any;
+  setActiveSection: React.Dispatch<React.SetStateAction<string>>;
 }
 
  const LandingPageProfessor: React.FC<LandingPageProfessorProps> = ({setActiveSection}) => {
   const exploreRef = useRef<HTMLElement>(null);
 
-  const handleExploreClick = () => {
-    exploreRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  // const handleExploreClick = () => {
+  //   exploreRef.current?.scrollIntoView({ behavior: "smooth" });
+  // };
 
 
   return (
