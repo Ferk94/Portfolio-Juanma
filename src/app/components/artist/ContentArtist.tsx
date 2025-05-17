@@ -9,9 +9,10 @@ import styles from "./ContentArtist.module.css";
 
 interface ContentArtistProps {
   activeSection: string;
+  setActiveSection: any;
 }
 
-const ContentArtist: React.FC<ContentArtistProps> = ({ activeSection }) => {
+const ContentArtist: React.FC<ContentArtistProps> = ({ activeSection, setActiveSection }) => {
   const renderSection = () => {
     switch (activeSection) {
       case "songs":
@@ -23,9 +24,9 @@ const ContentArtist: React.FC<ContentArtistProps> = ({ activeSection }) => {
       case "shows":
         return <Shows />;
       case "landing page":
-        return <LandingPageArtist/>;
+        return <LandingPageArtist setActiveSection={setActiveSection}/>;
       default:
-        return <LandingPageArtist />;
+        return <LandingPageArtist setActiveSection={setActiveSection} />;
     }
   };
 

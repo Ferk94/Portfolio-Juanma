@@ -1,6 +1,12 @@
 import styles from './LandingPageArtist.module.css';
 
-export default function LandingPageArtist() {
+
+interface LandingPageArtistProps {
+  setActiveSection: any;
+}
+
+
+const LandingPageArtist: React.FC<LandingPageArtistProps> = ({setActiveSection}) => {
   return (
     <section className={styles.container}>
       <div className={styles.backgroundOverlay}></div>
@@ -8,14 +14,16 @@ export default function LandingPageArtist() {
       <div className={styles.content}>
         <h1 className={styles.title}>Modo Artista</h1>
         <p className={styles.subtitle}>
-          Tu espacio para compartir música, solos y tus bandas favoritas.
+          El espacio donde comparto música, shows y mis composiciones.
         </p>
 
         <div className={styles.buttons}>
-          <button className={styles.cta}>🎶 Subí tu música</button>
-          <button className={styles.ctaOutline}>👥 Explorar artistas</button>
+          <button className={styles.cta} onClick={() => setActiveSection('songs')}>🎶 Composiciones</button>
+          <button className={styles.ctaOutline} onClick={() => setActiveSection('shows')}>👥 Explorar Shows</button>
         </div>
       </div>
     </section>
   );
 }
+
+export default LandingPageArtist;

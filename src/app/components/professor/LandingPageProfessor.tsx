@@ -41,7 +41,7 @@ interface LandingPageProfessorProps {
           <h1>Juan Manuel Belluschi</h1>
           <p>Clases de batería con pasión y técnica</p>
           <button onClick={() => setActiveSection('classes')} className={styles.ctaButton}>
-            Explorar
+            Explorar Clases
           </button>
         </div>
       </motion.div>

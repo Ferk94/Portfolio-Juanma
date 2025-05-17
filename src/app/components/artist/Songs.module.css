@@ -22,7 +22,7 @@
 
 .tema h2 {
   margin-bottom: 0.5rem;
-  color: #922;
+  color: #264653;
 }
 
 .tema p {
@@ -42,7 +42,7 @@
 }
 
 .cta a {
-  background-color: #922;
+  background-color: #264653;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -52,5 +52,5 @@
 }
 
 .cta a:hover {
-  background-color: #700;
+  background-color: #0b252f;
 }

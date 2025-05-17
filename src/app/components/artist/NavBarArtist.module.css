@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   background-color: #1a1a1a;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid #333;
   gap: 1rem;
@@ -13,13 +13,7 @@
 
 .menuIcon {
   display: none;
-  color: #00c3ff;
-  font-size: 1.5rem;
   cursor: pointer;
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .navLinks {
@@ -63,6 +57,31 @@
   width: 100%;
 }
 
+.navButtonHome {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+  position: relative;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 1rem;
+}
+
+.leftSection .navButton img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .navbar {
@@ -79,6 +98,15 @@
 }
   .menuIcon {
     display: block;
+    position: absolute;
+    top: 57%;
+    transform: translateY(-50%);
+    z-index: 11; /* Encima del resto */
+  }
+
+  .houseIcon {
+    width: 28px;
+    height: 28px;
   }
 
   .navLinks {

@@ -8,9 +8,6 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   gap: 1rem;
   font-family: 'Verdana', sans-serif;
-  position: sticky;
-  top: 0;
-  z-index: 10;
   position: relative;
 }
 
@@ -133,7 +130,7 @@
   .menuIcon {
     display: block;
     position: absolute;
-    top: 50%;
+    top: 57%;
     transform: translateY(-50%);
     z-index: 11; /* Encima del resto */
   }

@@ -38,7 +38,7 @@ export default function NavBarProfessor({ onSectionChange }: Props) {
 
       {/* Botones del centro (desktop o menú mobile abierto) */}
       <div className={`${styles.centerSection} ${isMenuOpen ? styles.open : ""}`}>
-        <button className={styles.navButton} onClick={() => handleSectionChange("calendar")}>Calendario</button>
+        {/* <button className={styles.navButton} onClick={() => handleSectionChange("calendar")}>Calendario</button> */}
         <button className={styles.navButton} onClick={() => handleSectionChange("classes")}>Clases</button>
         <button className={styles.navButton} onClick={() => handleSectionChange("resources")}>Recursos</button>
         <button className={styles.navButton} onClick={() => handleSectionChange("testimonials")}>Testimonios</button>

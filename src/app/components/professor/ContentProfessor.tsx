@@ -16,8 +16,8 @@ interface ContentProfessorProps {
 const ContentProfessor: React.FC<ContentProfessorProps> = ({ activeSection, setActiveSection }) => {
   const renderSection = () => {
     switch (activeSection) {
-      case "calendar":
-        return <CalendarView />;
+      // case "calendar":
+      //   return <CalendarView />;
       case "classes":
         return <Classes />;
       case "resources":

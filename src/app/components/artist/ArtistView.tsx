@@ -12,7 +12,7 @@ export default function ArtistView() {
   return (
     <div className="min-h-screen relative bg-[#121212] text-white">
       <NavBarArtist onSectionChange={setActiveSection} />
-      <ContentArtist activeSection={activeSection} />
+      <ContentArtist activeSection={activeSection} setActiveSection={setActiveSection} />
       <RadioPlayer/>
     </div>
   );
