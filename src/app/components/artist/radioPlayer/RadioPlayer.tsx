@@ -4,18 +4,6 @@ import styles from './RadioPlayer.module.css';
 
 const playlist = [
   {
-    title: 'Us And Them - Pink Floyd',
-    src: '/songs/usAndThem.mp3',
-  },
-  {
-    title: 'Mi Soberano - Gustavo Cordera',
-    src: '/songs/miSoberano.mp3',
-  },
-  {
-    title: 'Shamming - Bob Marley',
-    src: '/songs/shamming.mp3',
-  },
-  {
     title: 'Sonrisas de Papel - Santi Attadia y lxs Equilibristas',
     src: '/songs/sonrisasDePapel.mp3',
   },
