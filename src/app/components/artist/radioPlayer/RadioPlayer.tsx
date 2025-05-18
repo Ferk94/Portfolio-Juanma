@@ -22,6 +22,10 @@ const playlist = [
   {
     title: 'Reflexión - Santi Attadia y lxs Equilibristas',
     src: '/songs/reflexion.mp3',
+  },
+  {
+    title: '18 - Santi Attadia y lxs Equilibristas',
+    src: '/songs/18.mp3',
   }
 ];
 
