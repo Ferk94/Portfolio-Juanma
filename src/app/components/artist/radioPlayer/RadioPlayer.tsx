@@ -91,6 +91,16 @@ export default function RadioPlayer() {
     setIsMinimized(!isMinimized);
   };
 
+  const ifLargeWord = (title: string) => {
+
+    
+    if(title.length > 20) {
+      return title.slice(0, 20) + '...';
+    } else {
+      return title;
+    }
+  }
+
   return (
     <div className={`${styles.container} ${isMinimized ? styles.minimized : ''}`}>
       <button className={styles.minimizeBtn} onClick={toggleMinimize}>
@@ -143,7 +153,7 @@ export default function RadioPlayer() {
 
       {isMinimized && (
         <div className={styles.minimizedContent}>
-          <p className={styles.minimizedTrack}>{playlist[currentTrack].title}</p>
+          <p className={styles.minimizedTrack}>{ifLargeWord(playlist[currentTrack].title)}</p>
           <div className={styles.controls}>
             <button onClick={handlePrev}>⏮️</button>
             <button onClick={handlePlayPause}>{isPlaying ? '⏸️' : '▶️'}</button>
