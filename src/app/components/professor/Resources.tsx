@@ -19,12 +19,12 @@ const Resources: React.FC = () => {
       </div>
 
       <div className={styles.resourceCard}>
-        <h3>🎥 Video: Técnica Básica</h3>
-        <p>Un video corto para practicar técnica de manos y coordinación.</p>
+        <h3>🎥 Video: Elementos que conforman la Batería</h3>
+        <p>Un video corto para reconocer cada elemento y sus respectivos sonidos.</p>
         <iframe
           width="100%"
           height="315"
-          src="https://www.youtube.com/embed/aLzICL_gPgA"
+          src="https://youtube.com/embed/3oVT55Lg5y8" // 
           title="Video de Técnica"
           frameBorder="0"
           allowFullScreen

@@ -1,5 +1,4 @@
-// app/layout.tsx
-import "./globals.css"; // si usás Tailwind o CSS global
+import "./globals.css";
 import styles from './layout.module.css'
 import type { ReactNode } from "react";
 import { ViewModeProvider } from "./context/ViewModeContext";
