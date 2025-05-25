@@ -24,7 +24,7 @@ const Resources: React.FC = () => {
         <iframe
           width="100%"
           height="315"
-          src="https://youtube.com/embed/3oVT55Lg5y8" // 
+          src="https://youtube.com/embed/3oVT55Lg5y8"
           title="Video de Técnica"
           frameBorder="0"
           allowFullScreen

@@ -2,18 +2,20 @@ import styles from "./FooterFerk.module.css";
 import React from "react";
 
 const FooterFerk = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className={styles.footer}>
       <p>
-        Sitio desarrollado por{" "}
+        Desarrollado por{" "}
         <a
-          href="https://portfolio-2024-green-seven.vercel.app" // Cambiá por tu web o LinkedIn
+          href="https://portfolio-2024-green-seven.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Ferk Lamar
         </a>{" "}
-        🚀 | Todos los derechos reservados
+        | &copy; {currentYear} - Todos los derechos reservados.
       </p>
     </footer>
   );
