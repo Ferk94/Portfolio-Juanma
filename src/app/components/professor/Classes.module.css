@@ -2,18 +2,18 @@
   background-color: #f7e7da;
   padding: 3rem 2rem;
   border-radius: 12px;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   color: #1a1a1a;
 }
 
 .title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #920909;
-  border-bottom: 2px solid #920909;
+  border-bottom: 1px solid #920909;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .grid {

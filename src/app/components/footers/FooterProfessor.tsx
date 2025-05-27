@@ -24,7 +24,7 @@ const FooterProfessor = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://www.youtube.com/channel/usuario_youtube"
+          href="https://www.youtube.com/@juanmanuelbelluschi5145"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="YouTube"

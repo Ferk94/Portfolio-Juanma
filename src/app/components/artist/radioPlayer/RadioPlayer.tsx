@@ -130,7 +130,7 @@ export default function RadioPlayer() {
                     background: `linear-gradient(to right, #00c853 ${(currentTime / duration) * 100}%, #888 ${(currentTime / duration) * 100}%)`
                 }}
             />
-            <span className={styles.timeInfo}>-{formatTime(duration - currentTime)}</span>
+            <span className={styles.timeInfo}>{formatTime(duration - currentTime)}</span>
           </div>
 
           <div className={styles.volumeSection}>
