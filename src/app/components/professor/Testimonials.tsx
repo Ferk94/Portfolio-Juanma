@@ -20,9 +20,9 @@ export default function Testimonials() {
         </div>
         <div className={styles.card}>
           <p className={styles.text}>
-            “Gracias a Juan me animé a tocar en vivo por primera vez. Súper recomendable como profe y persona.”
+            “Es muy buena onda, a la hora de enseñar se le entiende cada palabra, le pone mucha energía a las clases y tiene mucha habilidad para tocar. 10/10”
           </p>
-          <p className={styles.author}>— Leo, alumno desde 2022</p>
+          <p className={styles.author}>— Juan, ex alumno</p>
         </div>
       </div>
     </section>
