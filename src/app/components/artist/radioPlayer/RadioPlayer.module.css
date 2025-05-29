@@ -176,4 +176,47 @@
   transition: background 0.3s ease;
 }
 
+.playlistToggle {
+  background: #444;
+  border: 1px solid #888;
+  border-radius: 3px;
+  color: #fff;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0.6rem auto 0.4rem auto; /* centra y separa del contenido superior */
+  display: block;
+  width: fit-content;
+}
+
+.playlistToggle:hover {
+  background: #666;
+}
+
+.playlist {
+  margin-top: 0.5rem;
+  max-height: 150px;
+  overflow-y: auto;
+  border-top: 1px solid #555;
+  padding-top: 0.3rem;
+}
+
+.trackItem {
+  padding: 0.3rem 0;
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: #ccc;
+  border-bottom: 1px solid #444;
+}
+
+.trackItem:hover {
+  color: #fff;
+}
+
+.activeTrack {
+  font-weight: bold;
+  color: #00c853;
+}
+
 

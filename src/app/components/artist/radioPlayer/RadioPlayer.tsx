@@ -25,6 +25,8 @@ export default function RadioPlayer() {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isMinimized, setIsMinimized] = useState(false);
+  const [showPlaylist, setShowPlaylist] = useState(false);
+
 
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);
@@ -89,6 +91,7 @@ export default function RadioPlayer() {
 
   const toggleMinimize = () => {
     setIsMinimized(!isMinimized);
+    setShowPlaylist(false);
   };
 
   const ifLargeWord = (title: string) => {
@@ -148,8 +151,31 @@ export default function RadioPlayer() {
                 }}
             />
           </div>
+          {/* Playlist toggle button */}
+          <button onClick={() => setShowPlaylist(!showPlaylist)} className={styles.playlistToggle}>
+            {showPlaylist ? 'Ocultar' : 'PlayList'}
+          </button>
+
         </>
       )}
+
+          {showPlaylist && (
+      <div className={styles.playlist}>
+        {playlist.map((track, index) => (
+          <div
+            key={index}
+            className={`${styles.trackItem} ${index === currentTrack ? styles.activeTrack : ''}`}
+            onClick={() => {
+              setCurrentTrack(index);
+              setIsPlaying(true);
+              setTimeout(() => audioRef.current?.play(), 0);
+            }}
+          >
+            {track.title}
+          </div>
+        ))}
+      </div>
+    )}
 
       {isMinimized && (
         <div className={styles.minimizedContent}>
