@@ -14,6 +14,30 @@ const playlist = [
   {
     title: '18 - Santi Attadia y lxs Equilibristas',
     src: '/songs/18.mp3',
+  },
+  {
+    title: 'Aceptándome - Santi Attadia y lxs Equilibristas',
+    src: '/songs/Aceptándome.mp3',
+  },
+  {
+    title: 'Banal - Santi Attadia y lxs Equilibristas',
+    src: '/songs/Banal.mp3',
+  },
+  {
+    title: 'Lluvia - Santi Attadia y lxs Equilibristas',
+    src: '/songs/Lluvia.mp3',
+  },
+  {
+    title: 'Mirando Caras - Santi Attadia y lxs Equilibristas',
+    src: '/songs/Mirando Caras.mp3',
+  },
+  {
+    title: 'Paranoia - Santi Attadia y lxs Equilibristas',
+    src: '/songs/Paranoia.mp3',
+  },
+  {
+    title: 'Tema de Nadie - Santi Attadia y lxs Equilibristas',
+    src: '/songs/Tema de nadie.mp3',
   }
 ];
 
@@ -153,7 +177,7 @@ export default function RadioPlayer() {
           </div>
           {/* Playlist toggle button */}
           <button onClick={() => setShowPlaylist(!showPlaylist)} className={styles.playlistToggle}>
-            {showPlaylist ? 'Ocultar' : 'PlayList'}
+            {showPlaylist ? '✖' : '☰'}
           </button>
 
         </>

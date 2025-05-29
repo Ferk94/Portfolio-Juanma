@@ -35,7 +35,7 @@
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  color: #00ffb3;
+  color: #00c853;
 }
 
 .subtitle {
@@ -52,7 +52,7 @@
 }
 
 .cta {
-  background-color: #00ffb3;
+  background-color: #00c853;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
@@ -68,8 +68,8 @@
 
 .ctaOutline {
   background-color: transparent;
-  border: 2px solid #00ffb3;
-  color: #00ffb3;
+  border: 2px solid #00c853;
+  color: #00c853;
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
   font-weight: bold;
@@ -78,7 +78,7 @@
 }
 
 .ctaOutline:hover {
-  background-color: #00ffb3;
+  background-color: #00c853;
   color: #000;
 }
 

@@ -181,11 +181,11 @@
   border: 1px solid #888;
   border-radius: 3px;
   color: #fff;
-  padding: 0.25rem 0.4rem;
+  padding: 0.20rem 0.35rem;
   font-size: 0.8rem;
   cursor: pointer;
   transition: background 0.2s;
-  margin: 0.6rem auto 0.4rem auto; /* centra y separa del contenido superior */
+  margin: 0.6rem auto 0.6rem auto; /* centra y separa del contenido superior */
   display: block;
   width: fit-content;
 }
@@ -197,10 +197,17 @@
 .playlist {
   margin-top: 0.5rem;
   max-height: 150px;
-  overflow-y: auto;
+  overflow-y: scroll;
   border-top: 1px solid #555;
   padding-top: 0.3rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge Legacy */
 }
+
+.playlist::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y otros WebKit */
+}
+
 
 .trackItem {
   padding: 0.3rem 0;
@@ -211,7 +218,7 @@
 }
 
 .trackItem:hover {
-  color: #fff;
+  color: #00c853;
 }
 
 .activeTrack {

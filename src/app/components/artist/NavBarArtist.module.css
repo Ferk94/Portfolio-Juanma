@@ -38,7 +38,7 @@
 
 .navButton:hover {
   background-color: #333;
-  color: #00c3ff;
+  color: #00c853;
 }
 
 .navButton::after {
@@ -48,7 +48,7 @@
   height: 2px;
   left: 50%;
   bottom: 0;
-  background-color: #00c3ff;
+  background-color: #00c853;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -137,6 +137,6 @@
 
   .navButton:hover {
     background-color: #333;
-    color: #00c3ff;
+    color: #00c853;
   }
 }
