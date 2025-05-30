@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.env.local
 
 # vercel
 .vercel
@@ -39,3 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# json credentials
+# This file is used to store sensitive information such as API keys, secrets, etc.
+# It is important to keep this file out of version control to protect sensitive data.
+testimonials-461401-4ea2e266ea14.json

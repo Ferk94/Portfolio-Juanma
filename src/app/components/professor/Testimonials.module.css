@@ -6,6 +6,8 @@
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -17,11 +19,17 @@
 }
 
 .cards {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 3rem; /* margen abajo para separar del form */
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr; /* 2 columnas en desktop */
+  }
 }
 
 .card {
@@ -31,6 +39,23 @@
   /* border: 2px solid #920909; */
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   text-align: left;
+
+   /* Limitar ancho máximo para que no crezca más allá de X */
+  max-width: 500px; /* o el tamaño que desees */
+  
+  /* Que el texto se ajuste y haga wrap */
+  word-wrap: break-word; /* soporte legacy */
+  overflow-wrap: break-word; /* estándar moderno */
+
+  /* Forzar el quiebre de palabras largas sin espacios */
+  word-break: break-word; /* esta es la clave */
+
+  /* Evita que la caja crezca más de lo permitido */
+  overflow: hidden;
+
+  /* Opcional: limitar altura y agregar scroll si se quiere */
+  max-height: 300px; /* ajustar a lo que te convenga */
+  overflow-y: hidden;
 }
 
 .text {
@@ -44,3 +69,95 @@
   font-weight: bold;
   color: #920909;
 }
+
+.form {
+  max-width: 800px; /* controla el ancho del form */
+  max-height: 300px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form input {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  height: 50px;
+  border: 1.5px solid #920909;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  width: 100%; /* que ocupe todo el ancho del form */
+  box-sizing: border-box;
+  max-width: 100%; /* no limitar el ancho */
+}
+.form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  height: 200px;
+  border: 1.5px solid #920909;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  width: 100%; /* que ocupe todo el ancho del form */
+  box-sizing: border-box;
+  max-width: 100%; /* no limitar el ancho */
+}
+
+.form textarea {
+  min-height: 80px;
+}
+
+.form button {
+  background-color: #920909;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  margin: 0 auto;
+  max-width: 200px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #b31b1b;
+}
+
+/* Testimonials.module.css */
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.editBtn,
+.deleteBtn {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.editBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.editBtn:hover {
+  background-color: #45a049;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background-color: #d32f2f;
+}
+
+
