@@ -48,7 +48,7 @@ export default function Testimonials() {
   }, []);
 
   const saveTestimonial = async (card: Testimonial) => {
-    const isEdit = isEditing && userTestimonial?.rowIndex !== undefined;
+    // const isEdit = isEditing && userTestimonial?.rowIndex !== undefined;
     const method = userTestimonial && userTestimonial.rowIndex ? "PUT" : "POST";
     const url = "/api/testimonios";
 

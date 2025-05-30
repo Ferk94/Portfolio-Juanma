@@ -1,4 +1,5 @@
-# Proyecto Plataforma Artista & Profesor - Landing + Paneles Interactivos
+
+# 🎵 Proyecto Plataforma Artista & Profesor - Landing + Paneles Interactivos
 
 Este proyecto fue desarrollado para un **profesor de batería** que buscaba una presencia online más moderna y flexible, tanto para su perfil profesional como artístico. La idea fue construir una **landing page visual y atractiva**, y dos **paneles separados**: uno orientado a su rol como **Profesor** y otro a su faceta como **Artista**, cada uno con navegación, estética y funcionalidades propias.
 
@@ -6,22 +7,22 @@ Este proyecto fue desarrollado para un **profesor de batería** que buscaba una 
 
 ## ✨ Objetivos del cliente
 
-El cliente solicitó:
-
 - Una **landing page** clara, con presentación personal, llamados a la acción y acceso a ambos paneles (Profesor / Artista).
 - Dos paneles internos con navegaciones diferenciadas:
-  
-  ### 🔸 Panel del Profesor
-  - Vista de calendario.
-  - Sección de clases disponibles.
-  - Recursos didácticos descargables.
-  - Testimonios de alumnos.
-  - Estética sobria y profesional.
-  
-  ### 🔸 Panel del Artista
-  - Misma estructura general que el de profesor, pero con **diseño más expresivo**.
-  - Incluye una **radio personalizada** que reproduce temas grabados por el cliente tocando la batería.
-  - Cada tema cargado en la radio es de autoría propia, respetando los derechos de uso.
+
+### 🔸 Panel del Profesor
+
+- Vista de calendario.
+- Sección de clases disponibles.
+- Recursos didácticos descargables.
+- Testimonios de alumnos (con integración a Google Sheets y edición condicional).
+- Estética sobria y profesional.
+
+### 🔸 Panel del Artista
+
+- Misma estructura general que el de profesor, pero con **diseño más expresivo**.
+- Incluye una **radio personalizada** que ahora cuenta con **lista de reproducción**.
+- Cada tema cargado en la radio es de autoría propia, respetando los derechos de uso.
 
 - Todo el sitio debía ser **modular y fácilmente escalable**.
 - Diseño **responsive**, visualmente atractivo y funcional en dispositivos móviles.
@@ -30,53 +31,61 @@ El cliente solicitó:
 
 ## 🧪 Tecnologías utilizadas
 
-### 🔹 Next.js
-Framework basado en React que permite SSR y generación estática. Ideal para proyectos con rutas diferenciadas (landing + dos paneles).
+### 🔹 Next.js  
+Framework basado en React que permite SSR y generación estática.
 
-### 🔹 TypeScript
-Lenguaje con tipado fuerte que mejora la mantenibilidad, reduce errores y da soporte a largo plazo.
+### 🔹 Next.js API Routes  
+API Routes utilizadas como backend para manejar la lógica con **Google Sheets**, permitiendo operaciones CRUD desde el frontend.
 
-### 🔹 CSS Modules
-Permiten aplicar estilos encapsulados por componente, lo que ayudó a mantener separados y bien definidos los estilos del modo Artista y Profesor.
+### 🔹 TypeScript  
+Tipado fuerte para mayor mantenibilidad y reducción de errores.
 
-### 🔹 HTML5 Audio API
-Utilizada en el panel Artista para la creación de una radio con temas en formato `.mp3`. Se incorporó un `<audio>` personalizado.
+### 🔹 CSS Modules  
+Estilos encapsulados por componente para separación clara entre los modos.
 
-### 🔹 Next/Image
-Usada para optimizar imágenes automáticamente y mejorar la performance de la landing y los paneles.
+### 🔹 HTML5 Audio API  
+Radio personalizada con **lista de reproducción dinámica** y controles avanzados.
 
-### 🔹 Git + GitHub
-Control de versiones completo con ramas organizadas por funcionalidad y fases del proyecto.
+### 🔹 Next/Image  
+Optimización automática de imágenes para mejor performance.
+
+### 🔹 Google Sheets API  
+Gestión de testimonios. Los usuarios pueden editar o borrar solo sus propios testimonios gracias a `localStorage`.
+
+### 🔹 Git + GitHub  
+Control de versiones con ramas por funcionalidad.
 
 ---
 
 ## 🎨 Detalles de diseño
 
-- Se implementaron **dos barras de navegación diferentes**:
-  - En el modo Profesor: diseño sobrio (fondo celeste oscuro), con botón flotante para volver a la landing.
-  - En el modo Artista: diseño más contrastante (negro/gris oscuro) con hover interactivo y colores llamativos.
-- Los estilos fueron ajustados para mantener una altura consistente, sombras sutiles, y un diseño centrado tanto en funcionalidad como en estética.
+- **Navegación diferenciada** por panel:
+  - Profesor: estilo sobrio (celeste oscuro).
+  - Artista: estilo contrastante (negro con acentos llamativos).
+- **Tarjetas de testimonios** con control condicional de edición/borrado según usuario.
+- **Componentes reutilizables** para diseño y navegación.
 
 ---
 
 ## 🔐 Legalidad y propiedad de contenido
 
-- Todos los temas usados en la **radio del panel Artista** fueron grabados por el profesor personalmente en batería.
-- No se utilizaron pistas comerciales protegidas por derechos de autor.
-- El reproductor fue diseñado para emitir únicamente esos contenidos, cumpliendo así con los requisitos legales.
+- Todos los temas musicales en la radio fueron grabados por el profesor en batería.
+- No se usaron pistas protegidas por derechos de autor.
+- El reproductor está limitado a contenido de autoría propia.
 
 ---
 
 ## 👨‍💻 Autor
 
-Este proyecto fue desarrollado por **Fernando Kaganovicz** como desarrollador freelance full stack. Me encargué del diseño, estructura técnica, componentes funcionales, y adaptación visual en base al feedback del cliente.
+Desarrollado por **Fernando Kaganovicz** como desarrollador freelance full stack. Me encargué del diseño visual, la lógica técnica, integración con servicios externos y adaptación basada en el feedback continuo del cliente.
 
 ---
 
 ## 🚀 Posibles mejoras futuras
 
-- Incorporar un CMS (como Sanity, Strapi o Contentful) para que el cliente pueda cargar fácilmente nuevos recursos o testimonios.
-- Integrar autenticación para que el cliente acceda a un panel editable.
-- Mejorar el reproductor con lista de reproducción, orden aleatorio, etc.
-- Añadir formulario de contacto con reserva de clase automática desde el calendario.
+- Incorporar CMS para gestión de contenidos.
+- Añadir autenticación para un panel editable.
+- Mejorar reproductor con funcionalidades como reproducción aleatoria o favoritos.
+- Formulario con reserva automática de clase.
 
+---
