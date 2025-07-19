@@ -19,9 +19,11 @@ export default function Testimonials() {
   );
   const [isEditing, setIsEditing] = useState(false);
 
+  const url = "https://portfolio-juanma-brown.vercel.app/api/testimonios"
+
   // Carga testimonios y chequea localStorage al iniciar
   useEffect(() => {
-    fetch("/api/testimonios")
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         const saved = localStorage.getItem("userTestimonial");
@@ -50,7 +52,7 @@ export default function Testimonials() {
   const saveTestimonial = async (card: Testimonial) => {
     // const isEdit = isEditing && userTestimonial?.rowIndex !== undefined;
     const method = userTestimonial && userTestimonial.rowIndex ? "PUT" : "POST";
-    const url = "/api/testimonios";
+    // const url = "/api/testimonios";
 
     const res = await fetch(url, {
       method,

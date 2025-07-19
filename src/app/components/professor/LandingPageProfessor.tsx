@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "./LandingPageProfessor.module.css";
 import { useRef } from "react";
@@ -30,13 +30,14 @@ interface LandingPageProfessorProps {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <Image
+        <img
           src="/perfilProfessor.jpeg"
           alt="Profesor de batería"
           width={280}
           height={280}
           className={styles.heroImage}
-        />
+        >
+        </img>
         <div className={styles.text}>
           <h1>Juan Manuel Belluschi</h1>
           <p>Clases de batería con pasión y técnica</p>

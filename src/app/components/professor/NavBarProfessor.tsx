@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./NavBarProfessor.module.css";
-import Image from "next/image";
-import HouseIcon from '@/public/houseIcon.jpeg';
+// import Image from "next/image";
+// import HouseIcon from '@/public/houseIcon.jpeg';
 import { FiMenu, FiX } from "react-icons/fi";
 
 interface Props {
@@ -21,8 +21,8 @@ export default function NavBarProfessor({ onSectionChange }: Props) {
       {/* Botón de inicio a la izquierda */}
       <div className={styles.leftSection}>
         <button className={styles.navButtonHome} onClick={() => handleSectionChange('landing page')}>
-          <Image
-            src={HouseIcon}
+          <img
+            src="houseIcon.jpeg"
             alt="landing page"
             className={styles.houseIcon}
             width={40}

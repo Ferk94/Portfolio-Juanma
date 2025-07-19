@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './NavBarArtist.module.css';
-import HouseIcon from '@/public/houseIcon.jpeg';
-import Image from 'next/image';
+// import HouseIcon from '@/public/houseIcon.jpeg';
+// import Image from 'next/image';
 import { FiMenu, FiX } from "react-icons/fi";
 
 interface Props {
@@ -27,8 +27,8 @@ export default function NavBarArtist({ onSectionChange }: Props) {
     <nav className={styles.navbar}>
       <div className={styles.leftSection}>
         <button className={styles.navButtonHome} onClick={() => onSectionChange('landing page')}>
-          <Image
-            src={HouseIcon}
+          <img
+            src="/houseIcon.jpeg"
             alt="landing page"
             className={styles.houseIcon}
             width={40}

@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: false,
+  output: "export", // 👈 Esto es lo que habilita el modo estático
   experimental: {
-    // Solo si necesitás configurar opciones específicas
     serverActions: {
       bodySizeLimit: '2mb',
       allowedOrigins: ['*'],
