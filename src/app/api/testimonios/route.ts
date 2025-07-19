@@ -21,6 +21,13 @@ function getSheetsClient() {
   return google.sheets({ version: 'v4', auth });
 }
 
+function withCors(response: NextResponse) {
+  response.headers.set('Access-Control-Allow-Origin', 'https://www.bateriaconjuanma.com.ar');
+  response.headers.set('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+  return response;
+}
+
 export async function GET() {
   try {
     const sheets = getSheetsClient();
@@ -38,10 +45,10 @@ export async function GET() {
       rowIndex: i + 2, // porque empieza desde la fila 2
     }));
 
-    return NextResponse.json(testimonials);
+    return withCors(NextResponse.json(testimonials));
   } catch (error) {
     console.error('Error leyendo desde Google Sheets:', error);
-    return NextResponse.json({ error: 'Error al obtener testimonios' }, { status: 500 });
+    return withCors(NextResponse.json({ error: 'Error al obtener testimonios' }, { status: 500 }));
   }
 }
 
@@ -50,7 +57,7 @@ export async function POST(req: NextRequest) {
     const { name, testimonial } = await req.json();
 
     if (!name || !testimonial) {
-      return NextResponse.json({ error: 'Nombre y testimonio requeridos' }, { status: 400 });
+      return withCors(NextResponse.json({ error: 'Nombre y testimonio requeridos' }, { status: 400 }));
     }
 
     const sheets = getSheetsClient();
@@ -74,10 +81,10 @@ export async function POST(req: NextRequest) {
     const currentRowCount = (readRes.data.values || []).length;
     const rowIndex = currentRowCount + 1; // porque A2 es la fila 2
 
-    return NextResponse.json({ name, testimonial, rowIndex }, { status: 201 });
+    return withCors(NextResponse.json({ name, testimonial, rowIndex }, { status: 201 }));
   } catch (error) {
     console.error('Error escribiendo en Google Sheets:', error);
-    return NextResponse.json({ error: 'Error al guardar testimonio' }, { status: 500 });
+    return withCors(NextResponse.json({ error: 'Error al guardar testimonio' }, { status: 500 }));
   }
 }
 
@@ -86,9 +93,8 @@ export async function PUT(req: NextRequest) {
   try {
     const { rowIndex, name, testimonial } = await req.json();
     
-    console.log(rowIndex, 'deberia ser el index de la fila a actualizar');
     if (!rowIndex || !name || !testimonial) {
-      return NextResponse.json({ error: 'Faltan datos' }, { status: 400 });
+      return withCors(NextResponse.json({ error: 'Faltan datos' }, { status: 400 }));
     }
 
     const sheets = getSheetsClient();
@@ -102,10 +108,10 @@ export async function PUT(req: NextRequest) {
       },
     });
 
-    return NextResponse.json({ success: true });
+    return withCors(NextResponse.json({ success: true }));
   } catch (error) {
     console.error('Error actualizando testimonio:', error);
-    return NextResponse.json({ error: 'Error al actualizar testimonio' }, { status: 500 });
+    return withCors(NextResponse.json({ error: 'Error al actualizar testimonio' }, { status: 500 }));
   }
 }
 
