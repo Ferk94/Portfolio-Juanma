@@ -120,7 +120,7 @@ export async function DELETE(req: NextRequest) {
     const { rowIndex } = await req.json();
 
     if (!rowIndex) {
-      return NextResponse.json({ error: 'rowIndex requerido' }, { status: 400 });
+      return withCors(NextResponse.json({ error: 'rowIndex requerido' }, { status: 400 }));
     }
 
     const sheets = getSheetsClient();
@@ -135,9 +135,9 @@ export async function DELETE(req: NextRequest) {
       },
     });
 
-    return NextResponse.json({ success: true });
+    return withCors(NextResponse.json({ success: true }));
   } catch (error) {
     console.error('Error eliminando testimonio:', error);
-    return NextResponse.json({ error: 'Error al eliminar testimonio' }, { status: 500 });
+    return withCors(NextResponse.json({ error: 'Error al eliminar testimonio' }, { status: 500 }));
   }
 }
