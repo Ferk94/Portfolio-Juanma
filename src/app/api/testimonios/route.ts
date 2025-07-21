@@ -22,7 +22,7 @@ function getSheetsClient() {
 }
 
 function withCors(response: NextResponse) {
-  response.headers.set('Access-Control-Allow-Origin', 'https://www.bateriaconjuanma.com.ar/'); // https://www.bateriaconjuanma.com.ar/
+  response.headers.set('Access-Control-Allow-Origin', "*"); // https://www.bateriaconjuanma.com.ar/
   response.headers.set('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
   return response;
