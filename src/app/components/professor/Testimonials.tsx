@@ -108,7 +108,7 @@ export default function Testimonials() {
   const handleDeleteCard = async () => {
     if (!userTestimonial?.rowIndex) return;
 
-    const res = await fetch("/api/testimonios", {
+    const res = await fetch(url, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ rowIndex: userTestimonial.rowIndex }),
