@@ -22,7 +22,7 @@ function getSheetsClient() {
 }
 
 function withCors(response: NextResponse) {
-  response.headers.set('Access-Control-Allow-Origin', "*"); // https://www.bateriaconjuanma.com.ar/
+  response.headers.set('Access-Control-Allow-Origin', "https://www.bateriaconjuanma.com.ar");
   response.headers.set('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
   return response;
@@ -140,4 +140,8 @@ export async function DELETE(req: NextRequest) {
     console.error('Error eliminando testimonio:', error);
     return withCors(NextResponse.json({ error: 'Error al eliminar testimonio' }, { status: 500 }));
   }
+}
+
+export async function OPTIONS() {
+  return withCors(new NextResponse(null, { status: 204 }));
 }
